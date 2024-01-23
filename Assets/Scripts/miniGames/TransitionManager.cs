@@ -49,7 +49,7 @@ public class TransitionManager : MonoBehaviour
     IEnumerator OnKingChoosing()
     {
         yield return new WaitForSeconds(1f);
-        currentMiniGame = miniGames[Random.Range(0, miniGames.Count)];//is this the right way to do this?fixxxxx 
+       // currentMiniGame = miniGames[Random.Range(0, miniGames.Count)];//is this the right way to do this?fixxxxx 
 
         currentState = State.miniGame;
 
