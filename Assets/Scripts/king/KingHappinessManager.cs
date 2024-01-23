@@ -22,11 +22,18 @@ public class KingHappinessManager : MonoBehaviour
     public void AddHappiness(int addedPoints)
     {
         kingHappiness += addedPoints;
+        if (kingHappiness >= 10)
+        {
+            //Play king laughing animation
+            //Load winning screen
+        }
+        else if (kingHappiness <= 0)
+        {
+            Player_Lives.Instance.SubtractLives(1);
+            kingHappiness = 5;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 }

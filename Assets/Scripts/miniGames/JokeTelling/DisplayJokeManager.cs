@@ -6,7 +6,7 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
 
 {
     //Jokes
-    //[SerializeField] private JokeContainer jokeContainer;
+    [SerializeField] private GameObject jokeChoices;
 
     #region Text Containers
     [SerializeField] TMP_Text jokePhrasetxt;
@@ -77,8 +77,10 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
 
     }
 
-    public void DisplayJoke(JokeContainer jokeContainer)
+    public void DisplayJoke(JokeCatagory jokeCatagory)
     {
+        JokeContainer jokeContainer = JokeList.Instance.GetJoke(jokeCatagory);
+
         jokePhrase = jokeContainer.joke.jokePhrase;
 
         correctAnswer = jokeContainer.joke.correctAnswer;
@@ -96,6 +98,8 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
         Answer3.text = Choices[2];
         Answer4.text = Choices[3];
 
+        jokeChoices.SetActive(true);
+
     }
 
     public void CheckAnswer(TMP_Text buttonText)
@@ -103,6 +107,7 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
         if (buttonText.text == correctAnswer)
         {
             Debug.Log("Correct");
+            //We need to do the points logic
         }
         else
         {

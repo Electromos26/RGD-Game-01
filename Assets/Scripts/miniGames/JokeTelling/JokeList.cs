@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class JokeList : Singleton<JokeList>
@@ -11,6 +12,8 @@ public class JokeList : Singleton<JokeList>
     [SerializeField] private JokeContainer[] medievalJokes;
 
     private List<JokeContainer[]> list = new();
+
+    JokeCatagory[] cat = new JokeCatagory[3];
 
     void Awake() // load all jokes from resources folder
     {
@@ -28,7 +31,6 @@ public class JokeList : Singleton<JokeList>
         list.Add(animalJokes);
         list.Add(farmingJokes);
         list.Add(medievalJokes);
-
 
         //Debug.Log(sportsJokes.Length);
     }
@@ -54,25 +56,21 @@ public class JokeList : Singleton<JokeList>
                 return null;
         }
 
-
     }
-    public void RandomJokeSelection()
+    public void RandomCatSelection()
     {
-        int randomJoke = Random.Range(0, list.Count);
-        /*JokeCatagory cat1 = list[randomJoke][0].joke.jokeType;
-        JokeCatagory cat2 = list[randomJoke][1].joke.jokeType;
-        JokeCatagory cat3 = list[randomJoke][2].joke.jokeType;*/
-
-        /*List<JokeContainer[]> tempList = list;
-        for (int i = 0; i < 2; i++)
+        Debug.Log("Check");
+        List<JokeContainer[]> tempList = list;
+        for (int i = 0; i < 3; i++)
         {
             int randomCat = Random.Range(0, tempList.Count);
-
-            JokeCatagory selectedGameObject = tempList[cat];
-            MeshRenderer visible = selectedGameObject.GetComponent<MeshRenderer>();
-            visible.enabled = true;
-            tempObj.RemoveAt(randomGameObject);
-        }*/
+            Debug.Log(randomCat);
+            Debug.Log(tempList[randomCat][0].joke.jokeType);
+            cat[i] = tempList[randomCat][0].joke.jokeType;
+            tempList.RemoveAt(randomCat);
+        }
+       //Debug.Log(tempList.Count);
+        JokeMiniGame.Instance.Show3Catagory(cat);
     }
 
 }

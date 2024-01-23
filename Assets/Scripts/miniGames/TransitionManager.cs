@@ -6,8 +6,8 @@ public class TransitionManager : MonoBehaviour
 {
     public List<GameObject> miniGames = new();
 
-    private Dictionary<string, GameObject> miniGamesDict = new();
-
+/*    private Dictionary<string, GameObject> miniGamesDict = new();
+*/
     private GameObject currentMiniGame;
 
     private enum State
@@ -18,26 +18,20 @@ public class TransitionManager : MonoBehaviour
     }
     private State currentState;
 
-    private void Awake()
+    private void Start()
     {
-        foreach (GameObject miniGame in miniGames)
-        {
-            miniGamesDict.Add(miniGame.name, miniGame);
-        }
-        currentState = State.kingChoosing;
+        SetState(State.kingChoosing);
     }
 
-    public void StartMiniGame()
+    private void SetState(State newState)
     {
+        currentState = newState;
+        StopAllCoroutines();
         switch (currentState)
         {
             case State.kingChoosing:
-                StartCoroutine(OnKingChoosing());
+                OnKingChoosing();
                 break;
-            case State.miniGame:
-                StartCoroutine(OnMiniGame());
-                break;
-
             case State.KingReacting:
                 StartCoroutine(OnKingReacting());
                 break;
@@ -46,24 +40,26 @@ public class TransitionManager : MonoBehaviour
         }
 
     }
-    IEnumerator OnKingChoosing()
+    void OnKingChoosing()
     {
-        yield return new WaitForSeconds(1f);
-       // currentMiniGame = miniGames[Random.Range(0, miniGames.Count)];//is this the right way to do this?fixxxxx 
+        Debug.Log("Choosing");
 
-        currentState = State.miniGame;
-
-    }
-    IEnumerator OnMiniGame()
-    {
-        yield return new WaitForSeconds(1f);
-        miniGames[Random.Range(0, miniGames.Count)].SetActive(false);
-        currentState = State.KingReacting;
+        Invoke("RunFunction", 5f);
+        // currentMiniGame = miniGames[Random.Range(0, miniGames.Count)];//is this the right way to do this?fixxxxx 
+        // oWe need to choose one minigame from the random list
     }
     IEnumerator OnKingReacting()
     {
         yield return new WaitForSeconds(1f);
         miniGames[Random.Range(0, miniGames.Count)].SetActive(true);
-        currentState = State.kingChoosing;
+        SetState(State.kingChoosing);
+
     }
+
+    private void RunFunction()
+    {
+        miniGames[0].gameObject.GetComponent<MiniGames>().OnMiniGameStart.Invoke();
+    }
+
+
 }
