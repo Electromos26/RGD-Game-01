@@ -9,7 +9,7 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
     [SerializeField] private GameObject jokeChoices;
 
     #region Text Containers
-    [SerializeField] TMP_Text jokePhrasetxt;
+    [SerializeField] TMP_Text JokeQuestion;
 
     [SerializeField] TMP_Text Answer1;
     [SerializeField] TMP_Text Answer2;
@@ -89,7 +89,7 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
         firstPart = jokeContainer.joke.firstPart;
         lastPart = jokeContainer.joke.lastPart;
 
-        jokePhrasetxt.text = jokePhrase;
+        JokeQuestion.text = jokePhrase;
 
         SelectAnswers(jokeContainer);
         
