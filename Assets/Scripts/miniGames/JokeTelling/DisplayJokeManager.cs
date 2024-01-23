@@ -1,16 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using System.Linq;
-using UnityEditor.Search;
 
 public class DisplayJokeManager : Singleton<DisplayJokeManager>
 
 {
     //Jokes
-    [SerializeField] private JokeContainer jokeContainer;
+    //[SerializeField] private JokeContainer jokeContainer;
 
     #region Text Containers
     [SerializeField] TMP_Text jokePhrasetxt;
@@ -33,10 +29,10 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
 
     private void Awake()
     {
-        DisplayJoke();
+        //DisplayJoke();
     }
 
-    void SelectAnswers()
+    void SelectAnswers(JokeContainer jokeContainer)
     {
         wrongAnswer = jokeContainer.joke.wrongAnswer;
         wrongChoices = new string[3];
@@ -80,7 +76,8 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
         }
 
     }
-    public void DisplayJoke()
+
+    public void DisplayJoke(JokeContainer jokeContainer)
     {
         jokePhrase = jokeContainer.joke.jokePhrase;
 
@@ -92,7 +89,7 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
 
         jokePhrasetxt.text = jokePhrase;
 
-        SelectAnswers();
+        SelectAnswers(jokeContainer);
         
         Answer1.text = Choices[0];
         Answer2.text = Choices[1];
@@ -111,6 +108,8 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
         {
             Debug.Log("Wrong");
         }
+
+        //Shoot Event for new message popup with the answer the player gave
     }
 
 }
