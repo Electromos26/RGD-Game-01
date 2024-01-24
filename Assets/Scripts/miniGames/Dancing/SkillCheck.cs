@@ -31,6 +31,7 @@ public class SkillCheck : MonoBehaviour
             if (pass)
             {
                 Debug.Log("Skill Check : Passed");
+               // DanceMiniGame.Instance.NextTurn();
             }
             else
             {

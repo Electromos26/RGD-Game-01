@@ -15,14 +15,22 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timer = 0;
+        StartOfTimer.Invoke(timeLimit);
+    }
+    private void OnEnable()
+    {
+        timer = 0;
         StartOfTimer.Invoke(timeLimit);
     }
 
     // Update is called once per frame
     void Update()
     {
+
         UpdateOfTimer.Invoke(timer);
         timer += Time.deltaTime;
+        Debug.Log(timer);
         if (timer > timeLimit)
         {
             EndOfTimer.Invoke();

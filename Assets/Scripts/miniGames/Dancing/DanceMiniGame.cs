@@ -17,7 +17,7 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
     {
        
     }
-    private void NextTurn()
+    public void NextTurn()
     {
       ball.SpeedX2();
         currentBox++;

@@ -22,10 +22,15 @@ public class TimerUI : Singleton<TimerUI>
         slider.value = max;
     }
 
-    public void SetHealth(float health)
+    public void SetCurrentTimer(float time)
     {
-        slider.value = health;
+        //slider.value = health;
+        slider.value = (slider.maxValue - time);
         GetComponentInChildren<Image>().color = Color.Lerp(Low, High, slider.normalizedValue);
+        if(slider.value <= 0.1f)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }
 
