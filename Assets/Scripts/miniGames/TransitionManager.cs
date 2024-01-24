@@ -48,7 +48,8 @@ public class TransitionManager : Singleton<TransitionManager>
     }
     IEnumerator OnKingReacting()
     {
-        yield return new WaitForSeconds(1f);
+        //Show Kings Reaction on top of its head
+        yield return new WaitForSeconds(3f);
 
         SetState(State.kingChoosing);
 

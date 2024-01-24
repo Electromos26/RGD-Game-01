@@ -7,6 +7,8 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
 {
     //Jokes
     [SerializeField] private GameObject jokeChoices;
+    [SerializeField] private GameObject jokeAnswer;
+
 
     #region Text Containers
     [SerializeField] TMP_Text JokeQuestion;
@@ -105,7 +107,9 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
 
     public void CheckAnswer(TMP_Text buttonText)
     {
-        if (buttonText.text == correctAnswer)
+        string answer = buttonText.text;
+
+        if (answer == correctAnswer)
         {
             Debug.Log("Correct");
             points++;
@@ -120,14 +124,24 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
 
         KingHappinessManager.Instance.AddHappiness(points);
 
-        Debug.Log(points);
-
         points = 0;
 
         jokeChoices.SetActive(false);
 
-
+        JokesAnswer(answer);
         //Shoot Event for new message popup with the answer the player gave
+
+        TransitionManager.Instance.SetState(TransitionManager.State.KingReacting);
+
+
+    }
+
+    private void JokesAnswer(string answer)
+    {
+        jokeAnswer.gameObject.GetComponentInChildren<TMP_Text>().text = firstPart + " " + answer + " " + lastPart;
+
+        jokeAnswer.SetActive(true);
+
     }
 
 }
