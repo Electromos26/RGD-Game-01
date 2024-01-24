@@ -26,6 +26,7 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
     private string[] wrongChoices;
     private string[] Choices;
 
+    public int points = 0;
 
     private void Awake()
     {
@@ -107,12 +108,24 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
         if (buttonText.text == correctAnswer)
         {
             Debug.Log("Correct");
+            points++;
+
             //We need to do the points logic
         }
         else
         {
             Debug.Log("Wrong");
+            points--;
         }
+
+        KingHappinessManager.Instance.AddHappiness(points);
+
+        Debug.Log(points);
+
+        points = 0;
+
+        jokeChoices.SetActive(false);
+
 
         //Shoot Event for new message popup with the answer the player gave
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KingHappinessManager : MonoBehaviour
+public class KingHappinessManager : Singleton<KingHappinessManager>
 {
     private int kingHappiness;
 
@@ -13,14 +13,9 @@ public class KingHappinessManager : MonoBehaviour
         kingHappiness = 5;
     }
 
-    public int _kingHappiness   // property
-    {
-        get { return kingHappiness; }   // get method
-        set { kingHappiness = value; }  // set method
-    }
-
     public void AddHappiness(int addedPoints)
     {
+        Debug.Log("adding");
         kingHappiness += addedPoints;
         if (kingHappiness >= 10)
         {
@@ -32,6 +27,7 @@ public class KingHappinessManager : MonoBehaviour
             Player_Lives.Instance.SubtractLives(1);
             kingHappiness = 5;
         }
+        Debug.Log(kingHappiness);
     }
 
 

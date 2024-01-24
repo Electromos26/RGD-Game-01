@@ -20,13 +20,3 @@ public struct JokeData
     public string lastPart;
 
 }
-
-public enum JokeCatagory
-{
-    Food,
-    Sports,
-    Music,
-    Animals,
-    Farming,
-    Medieval
-}

@@ -6,8 +6,6 @@ public class TransitionManager : MonoBehaviour
 {
     public List<GameObject> miniGames = new();
 
-/*    private Dictionary<string, GameObject> miniGamesDict = new();
-*/
     private GameObject currentMiniGame;
 
     private enum State
@@ -44,7 +42,7 @@ public class TransitionManager : MonoBehaviour
     {
         Debug.Log("Choosing");
 
-        Invoke("RunFunction", 5f);
+        Invoke("RunFunction", 3f);
         // currentMiniGame = miniGames[Random.Range(0, miniGames.Count)];//is this the right way to do this?fixxxxx 
         // oWe need to choose one minigame from the random list
     }

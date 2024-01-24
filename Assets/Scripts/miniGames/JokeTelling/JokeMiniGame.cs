@@ -17,6 +17,8 @@ public class JokeMiniGame : Singleton<JokeMiniGame>
 
     private JokeCatagory[] tempCat = new JokeCatagory[3];
 
+    private JokeCatagory correctCatagory;
+
     public void Show3Catagory(JokeCatagory[] catagories)
     {
         cat1 = catagories[0].ToString();
@@ -25,11 +27,14 @@ public class JokeMiniGame : Singleton<JokeMiniGame>
 
         tempCat = catagories;
 
+
         cat1Text.text = cat1;
         cat2Text.text = cat2;
         cat3Text.text = cat3;
 
         jokeCategories.SetActive(true);
+
+        SelectRightCat(tempCat);
 
     }
 
@@ -42,9 +47,25 @@ public class JokeMiniGame : Singleton<JokeMiniGame>
             if (tempCat[i].ToString()  == chosenCategory.text)
             {
                 DisplayJokeManager.Instance.DisplayJoke(tempCat[i]);
+                if (chosenCategory.text == correctCatagory.ToString())
+                {
+                    DisplayJokeManager.Instance.points++;
+                }
+                else
+                {
+                    DisplayJokeManager.Instance.points--;
+
+                }
             }
         }
 
+    }
+
+    private void SelectRightCat(JokeCatagory[] catagories)
+    {
+        int randomIndex = Random.Range(0, catagories.Length);
+        correctCatagory = catagories[randomIndex];
+        KingsThought.Instance.showThought(correctCatagory);
     }
 
 

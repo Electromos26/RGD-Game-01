@@ -59,17 +59,13 @@ public class JokeList : Singleton<JokeList>
     }
     public void RandomCatSelection()
     {
-        Debug.Log("Check");
         List<JokeContainer[]> tempList = list;
         for (int i = 0; i < 3; i++)
         {
             int randomCat = Random.Range(0, tempList.Count);
-            Debug.Log(randomCat);
-            Debug.Log(tempList[randomCat][0].joke.jokeType);
             cat[i] = tempList[randomCat][0].joke.jokeType;
             tempList.RemoveAt(randomCat);
         }
-       //Debug.Log(tempList.Count);
         JokeMiniGame.Instance.Show3Catagory(cat);
     }
 
