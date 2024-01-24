@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
+    public UnityEvent<float> StartOfTimer;
+    public UnityEvent<float> UpdateOfTimer;
     public UnityEvent EndOfTimer;
 
     private float timer = 0.0f;
@@ -13,12 +15,13 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartOfTimer.Invoke(timeLimit);
     }
 
     // Update is called once per frame
     void Update()
     {
+        UpdateOfTimer.Invoke(timer);
         timer += Time.deltaTime;
         if (timer > timeLimit)
         {
@@ -26,4 +29,5 @@ public class Timer : MonoBehaviour
             timer = 0f;
         }
     }
+    
 }
