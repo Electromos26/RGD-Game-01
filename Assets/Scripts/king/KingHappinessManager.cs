@@ -6,7 +6,6 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
 {
     private int kingHappiness;
 
-
     // Start is called before the first frame update
     void Start()
     {

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -59,7 +60,10 @@ public class JokeList : Singleton<JokeList>
     }
     public void RandomCatSelection()
     {
-        List<JokeContainer[]> tempList = list;
+        
+
+        List<JokeContainer[]> tempList = new();
+        tempList = list.ToList();
         for (int i = 0; i < 3; i++)
         {
             int randomCat = Random.Range(0, tempList.Count);

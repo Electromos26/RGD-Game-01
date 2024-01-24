@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player_Lives : Singleton<Player_Lives>
 {
     private int lives;
+
+    [SerializeField] private GameObject[] livesUI;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +27,7 @@ public class Player_Lives : Singleton<Player_Lives>
     {
         lives -= damage;
         //Reduce one face from UI
+        livesUI[lives].gameObject.SetActive(false);
         if (lives <= 0)
         {
             //Play king laughing animation

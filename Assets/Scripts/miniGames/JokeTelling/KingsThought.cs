@@ -25,12 +25,6 @@ public class KingsThought : Singleton<KingsThought>
     {
         image.sprite = myDict[correctCategory];
         thought.SetActive(true);
-        Invoke("DisableThought", 1f);
-    }
-
-    private void DisableThought()
-    {
-        thought.SetActive(false);
     }
 
 }

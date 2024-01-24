@@ -44,7 +44,7 @@ public class JokeMiniGame : Singleton<JokeMiniGame>
 
         for (int i = 0; i < tempCat.Length; i++)
         {
-            if (tempCat[i].ToString()  == chosenCategory.text)
+            if (tempCat[i].ToString() == chosenCategory.text)
             {
                 DisplayJokeManager.Instance.DisplayJoke(tempCat[i]);
                 if (chosenCategory.text == correctCatagory.ToString())
@@ -59,6 +59,12 @@ public class JokeMiniGame : Singleton<JokeMiniGame>
             }
         }
 
+    }
+
+    public void PunishAndReturn()
+    {
+        KingHappinessManager.Instance.AddHappiness(-2);
+        TransitionManager.Instance.SetState(TransitionManager.State.KingReacting);
     }
 
     private void SelectRightCat(JokeCatagory[] catagories)
