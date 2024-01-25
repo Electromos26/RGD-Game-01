@@ -10,7 +10,7 @@ public class TransitionManager : Singleton<TransitionManager>
 
     private GameObject currentMiniGame;
 
-    private int randomGameSelec;
+    private int currentGameSelec = 0;
 
     public enum State
     {
@@ -22,6 +22,7 @@ public class TransitionManager : Singleton<TransitionManager>
 
     private void Start()
     {
+
         SetState(State.kingChoosing);
     }
 
@@ -53,7 +54,7 @@ public class TransitionManager : Singleton<TransitionManager>
     {
         //Show Kings Reaction on top of its head
         yield return new WaitForSeconds(0.5f);
-        
+
         KingEmotion.Instance.PlayEmotionClip();
         Debug.Log("Reacting");
         SetState(State.kingChoosing);
@@ -62,14 +63,16 @@ public class TransitionManager : Singleton<TransitionManager>
 
     private void SelectMiniGame()
     {
-        randomGameSelec = Random.Range(0, miniGames.Count);
-        kingSpeakingBox.GetComponentInChildren<TMP_Text>().text = miniGames[randomGameSelec].name;
+
+        currentGameSelec = (currentGameSelec + 1) % miniGames.Count;
+
+        kingSpeakingBox.GetComponentInChildren<TMP_Text>().text = miniGames[currentGameSelec].name;
         kingSpeakingBox.SetActive(true);
     }
 
     public void StartMiniGame()
     {
-        miniGames[randomGameSelec].gameObject.GetComponent<MiniGames>().OnMiniGameStart.Invoke();
+        miniGames[currentGameSelec].gameObject.GetComponent<MiniGames>().OnMiniGameStart.Invoke();
     }
 
 }

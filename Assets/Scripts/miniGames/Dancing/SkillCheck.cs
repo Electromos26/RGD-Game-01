@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,12 +9,15 @@ public class SkillCheck : MonoBehaviour
     [SerializeField]
     private int right = 270;
 
+    [SerializeField] float minPos= 50;
     //play sounds in animation events
     [SerializeField] private AudioClip sucess;
     [SerializeField] private AudioClip fail;
 
     RectTransform rect;
     RectTransform originalPos;
+    float currentPos;
+    float targetPos;
     bool pass = false;
 
     bool canPress = false;
@@ -22,8 +26,8 @@ public class SkillCheck : MonoBehaviour
 
     private void Awake()
     {
-       rect = GetComponent<RectTransform>();
-       originalPos = rect;
+        rect = GetComponent<RectTransform>();
+        originalPos = rect;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -54,12 +58,13 @@ public class SkillCheck : MonoBehaviour
                 DanceMiniGame.Instance.Passed();
                 //Telepot to next position
             }
-            else if(canPress)
+            else if (canPress)
             {
                 ChangePos();
                 Debug.Log("Skill Check : Failed");
                 DanceMiniGame.Instance.Failed();
-            } else
+            }
+            else
             {
                 Debug.Log("Skill Check : Waiting");
             }
@@ -68,7 +73,7 @@ public class SkillCheck : MonoBehaviour
 
     private void OnEnable()
     {
-        canPress = true;  
+        canPress = true;
     }
     private void OnDisable()
     {
@@ -76,9 +81,30 @@ public class SkillCheck : MonoBehaviour
     }
     private void ChangePos()
     {
+        currentPos = rect.localPosition.x;
+
         Vector2 randomPos;
         randomPos.x = Random.Range(left, right);
         randomPos.y = rect.localPosition.y;
+
+        targetPos = randomPos.x;
+
+        float positionDif = Mathf.Abs(targetPos - currentPos);
+
+        if (positionDif < minPos)
+        {
+            if (currentPos > 0)
+            {
+                randomPos.x = currentPos + minPos;
+            }
+            else
+            {
+                randomPos.x = currentPos - minPos;
+            }
+        }
+
+
+
         rect.localPosition = randomPos;
     }
 
