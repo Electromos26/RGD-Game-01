@@ -131,9 +131,6 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
         JokesAnswer(answer);
         //Shoot Event for new message popup with the answer the player gave
 
-        TransitionManager.Instance.SetState(TransitionManager.State.KingReacting);
-
-
     }
 
     private void JokesAnswer(string answer)
@@ -143,5 +140,11 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
         jokeAnswer.SetActive(true);
 
     }
+
+    public void FinishJoke()
+    {
+        TransitionManager.Instance.SetState(TransitionManager.State.KingReacting);
+    }
+
 
 }

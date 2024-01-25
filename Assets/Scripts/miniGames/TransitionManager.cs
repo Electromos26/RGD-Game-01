@@ -52,8 +52,10 @@ public class TransitionManager : Singleton<TransitionManager>
     IEnumerator OnKingReacting()
     {
         //Show Kings Reaction on top of its head
-        yield return new WaitForSeconds(3f);
-
+        yield return new WaitForSeconds(0.5f);
+        
+        KingEmotion.Instance.PlayEmotionClip();
+        Debug.Log("Reacting");
         SetState(State.kingChoosing);
 
     }
@@ -69,6 +71,5 @@ public class TransitionManager : Singleton<TransitionManager>
     {
         miniGames[randomGameSelec].gameObject.GetComponent<MiniGames>().OnMiniGameStart.Invoke();
     }
-
 
 }

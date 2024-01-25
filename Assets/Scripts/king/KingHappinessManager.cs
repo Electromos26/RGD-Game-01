@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class KingHappinessManager : Singleton<KingHappinessManager>
@@ -15,16 +16,36 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
     public void AddHappiness(int addedPoints)
     {
         kingHappiness += addedPoints;
-        if (kingHappiness >= 10)
+
+
+        if (kingHappiness <= 0)
+        {
+            Player_Lives.Instance.SubtractLives(1);
+            //Play Attack animation
+            //Play Mad sound
+            kingHappiness = 5;
+        }
+        else if (kingHappiness >= 10)
         {
             //Play king laughing animation
             //Load winning screen
         }
-        else if (kingHappiness <= 0)
+        else
         {
-            Player_Lives.Instance.SubtractLives(1);
-            kingHappiness = 5;
+            if (addedPoints > 1)
+            {
+                KingEmotion.Instance.SetEmotion(KingEmotion.emotion.happy);
+            }
+            else if(addedPoints < -1)
+            {
+                KingEmotion.Instance.SetEmotion(KingEmotion.emotion.mad);
+            }
+            else
+            {
+                KingEmotion.Instance.SetEmotion(KingEmotion.emotion.neutral);
+            }
         }
+
         Debug.Log(kingHappiness);
     }
 
