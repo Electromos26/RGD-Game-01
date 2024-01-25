@@ -1,36 +1,28 @@
 using UnityEngine;
-
 public class DanceMiniGame : Singleton<DanceMiniGame>
 {
     [SerializeField]
-    private int turnLeft = 3;
+    private int turnsLeft = 4;
     [SerializeField]
     private BallMovement ball;
 
     private int finalPoints = 0;
-
+    private int resetValue;
     [SerializeField]
     private GameObject skillCheckGame;
 
-    private bool isDancing = false;
-    public bool IsDancing { get { return isDancing; } set { isDancing = value; } }
-
-
     private void Awake()
     {
-        
+        resetValue = turnsLeft;
     }
-     
     public void StartDancing()
     {
-        isDancing = true;
         skillCheckGame.SetActive(true);
 
-       //enable skill check
+        //enable skill check
     }
     void StopDancing()
     {
-        isDancing = false;
 
         //disable skill check
     }
@@ -38,44 +30,45 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
     {
         skillCheckGame.SetActive(false);
         StopDancing();
-        if (turnLeft > 0)
+        if (turnsLeft > 0)
         {
-            turnLeft--;
+            ball.SpeedX2();
+            turnsLeft--;
+
+            Invoke("StartDancing", 3f); //use Aniamtion event to call this
+                                        //Also disable timer UI at the starty of animation using event
+
         }
-        ball.SpeedX2();
-        //show animation 
-        Invoke("StartDancing", 3f); //use Aniamtion event to call this
+        else if (turnsLeft <= 0)
+        {
+            Debug.Log("Finish dance Mini Game");
+            FinishMiniGame();
+            return;
+        }
+    }
 
-
+    public void ResetGame()
+    {
+        turnsLeft = resetValue;
+        finalPoints = 0;
     }
 
     public void Passed()
     {
-   if (finalPoints < 2)
-        {
-            NextTurn();
+
+        if (finalPoints < 2)
             finalPoints++;
-           
-        }
+        NextTurn();
     }
     public void Failed()
     {
-   if (finalPoints > -2)
-        {
-            NextTurn();
-            finalPoints--;
-        }
-    }
- 
 
-   
-    private void Update()
-    {
-        if (turnLeft <= 0)
-        {
-            FinishMiniGame();
-        }
+        if (finalPoints > -2)
+            finalPoints--;
+        NextTurn();
     }
+
+
     public void FinishMiniGame()
     {
         KingHappinessManager.Instance.AddHappiness(finalPoints);

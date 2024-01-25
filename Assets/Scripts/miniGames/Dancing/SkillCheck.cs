@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SkillCheck : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class SkillCheck : MonoBehaviour
     bool pass = false;
 
     bool canPress = false;
+
+    [SerializeField] UnityEvent timerOff;
 
     private void Awake()
     {
@@ -71,10 +74,7 @@ public class SkillCheck : MonoBehaviour
     {
         Vector2 randomPos;
         randomPos.x = Random.Range(left, right);
-        Debug.Log("X = " + randomPos.x);
         randomPos.y = rect.localPosition.y;
-        Debug.Log( "Y = "+ randomPos.y);
-        
         rect.localPosition = randomPos;
     }
 

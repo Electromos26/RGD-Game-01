@@ -4,10 +4,13 @@ using UnityEngine.UI;
 
 public class BallMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 2f;
+  
+    [SerializeField] private float speedMultiply = 1.5f;
     [SerializeField] private GameObject start;
     [SerializeField] private GameObject end;
 
+
+    private float speed = 1f; 
     private RectTransform rect;
     private RectTransform startRect;
     private RectTransform endRect;
@@ -26,11 +29,15 @@ public class BallMovement : MonoBehaviour
 
     private void MoveBall()
     {
-        float t = Mathf.PingPong(Time.time * speed, 1f);
+        float t = Mathf.PingPong(Time.fixedTime * speed, 1f);
         rect.position = Vector2.Lerp(startRect.position, endRect.position, t);
     }
     public void SpeedX2()
     {
-        speed *= 2;
+        speed *= speedMultiply;
+    }
+    public void ResetSpeed()
+    {
+        speed = 1f;
     }
 }
