@@ -23,8 +23,8 @@ public class KingsThought : Singleton<KingsThought>
 
     public void showThought(JokeCatagory correctCategory)
     {
-        image.sprite = myDict[correctCategory];
         thought.SetActive(true);
+        image.sprite = myDict[correctCategory];
     }
 
 }

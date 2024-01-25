@@ -14,7 +14,6 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
 
     public void AddHappiness(int addedPoints)
     {
-        Debug.Log("adding");
         kingHappiness += addedPoints;
         if (kingHappiness >= 10)
         {

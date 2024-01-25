@@ -44,7 +44,6 @@ public class TransitionManager : Singleton<TransitionManager>
     }
     void OnKingChoosing()
     {
-        Debug.Log("Choosing");
 
         Invoke("SelectMiniGame", 3f);
         // currentMiniGame = miniGames[Random.Range(0, miniGames.Count)];//is this the right way to do this?fixxxxx 
