@@ -3041,6 +3041,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1821171689}
+        m_TargetAssemblyTypeName: DisplayJokeManager, Assembly-CSharp
+        m_MethodName: FinishJoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   timeLimit: 4
 --- !u!1 &1242962335
 GameObject:
@@ -3850,7 +3862,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1492525954}
-  - component: {fileID: 1492525956}
   - component: {fileID: 1492525955}
   - component: {fileID: 1492525957}
   m_Layer: 0
@@ -3887,27 +3898,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e4d7aaf48b2a74b86ee589729558e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1492525956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492525953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cd17e2e2790d4f4097f0fe1e7c022fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clipMad: {fileID: 0}
-  clipNeutral: {fileID: 0}
-  clipHappy: {fileID: 0}
-  spriteMad: {fileID: 0}
-  spriteNeutral: {fileID: 0}
-  spriteHappy: {fileID: 0}
-  SFXSource: {fileID: 0}
-  activeSprite: {fileID: 0}
-  kingFeedbackBox: {fileID: 0}
 --- !u!114 &1492525957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3928,7 +3918,7 @@ MonoBehaviour:
   spriteHappy: {fileID: 21300000, guid: 9adcc07b99dd34542994dda213a0714a, type: 3}
   SFXSource: {fileID: 790978364}
   activeSprite: {fileID: 1914634590}
-  kingFeedbackBox: {fileID: 0}
+  kingFeedbackBox: {fileID: 1591476224}
 --- !u!1 &1498697463
 GameObject:
   m_ObjectHideFlags: 0
@@ -4252,13 +4242,13 @@ MonoBehaviour:
   StartOfTimer:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 790978364}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: set_clip
-        m_Mode: 2
+      - m_Target: {fileID: 1492525957}
+        m_TargetAssemblyTypeName: KingEmotion, Assembly-CSharp
+        m_MethodName: PlayEmotionClip
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4282,7 +4272,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  timeLimit: 0.8
+  timeLimit: 1.5
 --- !u!222 &1591476227
 CanvasRenderer:
   m_ObjectHideFlags: 0
