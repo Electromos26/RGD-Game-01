@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d67f7427568324da270f738eee1067, type: 3}
-  m_Name: joke1
+  m_Name: joke1 2
   m_EditorClassIdentifier: 
   joke:
     jokeType: 3
-    jokePhrase: What do you get when you cross a snowman and a __________? Frostbite!
-    correctAnswer: vampire bat
+    jokePhrase: How do you catch a _______? Climb a tree and act like a nut!
+    correctAnswer: squirrel
     wrongAnswer:
     - wolf
     - chicken
@@ -25,11 +25,11 @@ MonoBehaviour:
     - pig
     - dog
     - cat
-    - squirrel
-    - oyster
     - frog
     - cow
     - bear
+    - vampire bat
+    - oyster
     - penguin
-    firstPart: What do you get when you cross a snowman and a
-    lastPart: '? Frostbite!'
+    firstPart: How do you catch a
+    lastPart: '? Climb a tree and act like a nut!'

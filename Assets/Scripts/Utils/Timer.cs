@@ -30,7 +30,6 @@ public class Timer : MonoBehaviour
 
         UpdateOfTimer.Invoke(timer);
         timer += Time.deltaTime;
-        Debug.Log(timer);
         if (timer > timeLimit)
         {
             EndOfTimer.Invoke();

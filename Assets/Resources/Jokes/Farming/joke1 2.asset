@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d67f7427568324da270f738eee1067, type: 3}
-  m_Name: joke1
+  m_Name: joke1 2
   m_EditorClassIdentifier: 
   joke:
     jokeType: 4
-    jokePhrase: What did the baby _____ say to the mama corn? "Where's popcorn?"
-    correctAnswer: corn
+    jokePhrase: Why did the farmer bring a ______ to the barn? Because he heard the
+      crops needed a little lift.
+    correctAnswer: ladder
     wrongAnswer:
-    - ladder
     - soil
+    - corn
     - turnip
     - eggs
     - fork
@@ -28,5 +29,5 @@ MonoBehaviour:
     - plant
     - town
     - beets
-    firstPart: What did the baby
-    lastPart: say to the mama corn? "Where's popcorn?"
+    firstPart: Why did the farmer bring a
+    lastPart: to the barn? Because he heard the crops needed a little lift.

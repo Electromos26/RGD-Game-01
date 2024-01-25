@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TransitionManager : Singleton<TransitionManager>
 {
     public List<GameObject> miniGames = new();
+    [SerializeField] private GameObject kingSpeakingBox;
 
     private GameObject currentMiniGame;
+
+    private int randomGameSelec;
 
     public enum State
     {
@@ -57,7 +61,14 @@ public class TransitionManager : Singleton<TransitionManager>
 
     private void SelectMiniGame()
     {
-        miniGames[0].gameObject.GetComponent<MiniGames>().OnMiniGameStart.Invoke();
+        randomGameSelec = Random.Range(0, miniGames.Count);
+        kingSpeakingBox.GetComponentInChildren<TMP_Text>().text = miniGames[randomGameSelec].name;
+        kingSpeakingBox.SetActive(true);
+    }
+
+    public void StartMiniGame()
+    {
+        miniGames[randomGameSelec].gameObject.GetComponent<MiniGames>().OnMiniGameStart.Invoke();
     }
 
 

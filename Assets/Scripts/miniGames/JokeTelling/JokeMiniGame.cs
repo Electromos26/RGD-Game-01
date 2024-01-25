@@ -47,6 +47,7 @@ public class JokeMiniGame : Singleton<JokeMiniGame>
             if (tempCat[i].ToString() == chosenCategory.text)
             {
                 DisplayJokeManager.Instance.DisplayJoke(tempCat[i]);
+                Debug.Log(tempCat[i]);
                 if (chosenCategory.text == correctCatagory.ToString())
                 {
                     DisplayJokeManager.Instance.points++;

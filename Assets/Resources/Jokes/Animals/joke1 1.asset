@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d67f7427568324da270f738eee1067, type: 3}
-  m_Name: joke1
+  m_Name: joke1 1
   m_EditorClassIdentifier: 
   joke:
     jokeType: 3
-    jokePhrase: What do you get when you cross a snowman and a __________? Frostbite!
-    correctAnswer: vampire bat
+    jokePhrase: Why don't _______ donate to charity? Because they are shellfish!
+    correctAnswer: oysters
     wrongAnswer:
     - wolf
     - chicken
@@ -26,10 +26,10 @@ MonoBehaviour:
     - dog
     - cat
     - squirrel
-    - oyster
     - frog
     - cow
     - bear
+    - vampire bat
     - penguin
-    firstPart: What do you get when you cross a snowman and a
-    lastPart: '? Frostbite!'
+    firstPart: Why don't
+    lastPart: donate to charity? Because they are shellfish!
