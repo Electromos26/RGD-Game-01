@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d67f7427568324da270f738eee1067, type: 3}
-  m_Name: joke1
+  m_Name: joke1 3
   m_EditorClassIdentifier: 
   joke:
     jokeType: 0
-    jokePhrase: Why did the ________ turn red? Because it saw the salad dressing!
-    correctAnswer: tomato
+    jokePhrase: 'Why did the _____ go to the doctor?
+
+      Because it wasn''t peeling
+      well!'
+    correctAnswer: banana
     wrongAnswer:
+    - tomato
     - nacho
-    - cookie
-    - banana
+    - wafer
     - grape
     - spaghetti
     - coffee
@@ -28,4 +31,4 @@ MonoBehaviour:
     - sushi
     - pancake
     firstPart: Why did the
-    lastPart: turn red? Because it saw the salad dressing!
+    lastPart: go to the doctor?
