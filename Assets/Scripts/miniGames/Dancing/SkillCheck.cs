@@ -8,6 +8,10 @@ public class SkillCheck : MonoBehaviour
     [SerializeField]
     private int right = 270;
 
+    //play sounds in animation events
+    [SerializeField] private AudioClip sucess;
+    [SerializeField] private AudioClip fail;
+
     RectTransform rect;
     RectTransform originalPos;
     bool pass = false;

@@ -34,7 +34,7 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
         {
             ball.SpeedX2();
             turnsLeft--;
-
+                                        //play animation
             Invoke("StartDancing", 3f); //use Aniamtion event to call this
                                         //Also disable timer UI at the starty of animation using event
 
