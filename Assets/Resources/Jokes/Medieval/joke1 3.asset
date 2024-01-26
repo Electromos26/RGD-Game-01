@@ -10,23 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d67f7427568324da270f738eee1067, type: 3}
-  m_Name: joke1
+  m_Name: joke1 3
   m_EditorClassIdentifier: 
   joke:
     jokeType: 5
-    jokePhrase: Why did the _____ bring a ladder to the dragon's lair? He wanted
-      to go to great heights to slay the beast!
-    correctAnswer: knight
+    jokePhrase: How did the knight propose to his _____ love? He gave her a "knight"
+      to remember!
+    correctAnswer: lady
     wrongAnswer:
-    - castle
+    - knight
     - dragon
+    - castle
     - blacksmith
-    - lady
     - comedian
     - jester
     - librarian
     - princess
     - king
-    firstPart: Why did the
-    lastPart: bring a ladder to the dragon's lair? He wanted to go to great heights
-      to slay the beast
+    firstPart: How did the knight propose to his
+    lastPart: love? He gave her a "knight" to remember!

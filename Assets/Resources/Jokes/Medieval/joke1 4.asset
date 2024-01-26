@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d67f7427568324da270f738eee1067, type: 3}
-  m_Name: joke1
+  m_Name: joke1 4
   m_EditorClassIdentifier: 
   joke:
     jokeType: 5
-    jokePhrase: Why did the _____ bring a ladder to the dragon's lair? He wanted
-      to go to great heights to slay the beast!
-    correctAnswer: knight
+    jokePhrase: What did the medieval _____ say when someone returned an overdue
+      book? You're in trebuchet-ble trouble!
+    correctAnswer: librarian
     wrongAnswer:
-    - castle
+    - knight
     - dragon
-    - blacksmith
+    - castle
     - lady
     - comedian
     - jester
-    - librarian
+    - blacksmith
     - princess
     - king
-    firstPart: Why did the
-    lastPart: bring a ladder to the dragon's lair? He wanted to go to great heights
-      to slay the beast
+    firstPart: What did the medieval
+    lastPart: say when someone returned an overdue book? You're in trebuchet-ble
+      trouble!

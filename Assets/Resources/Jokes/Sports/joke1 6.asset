@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d67f7427568324da270f738eee1067, type: 3}
-  m_Name: joke1
+  m_Name: joke1 6
   m_EditorClassIdentifier: 
   joke:
     jokeType: 1
-    jokePhrase: '"Why do fathers take an extra pair of socks when they go ______?"
-      "In case they get a hole in one!"'
-    correctAnswer: golf
+    jokePhrase: Why do _____ players never go on vacation? They would get called
+      for traveling!
+    correctAnswer: basketball
     wrongAnswer:
-    - cycling
+    - golf
     - football
-    - baseball
+    - cycling
     - tennis
     - soccer
-    - basketball
-    firstPart: '"Why do fathers take an extra pair of socks when they go'
-    lastPart: ?" "In case they get a hole in one!"
+    - baseball
+    firstPart: Why do
+    lastPart: players never go on vacation? They would get called for traveling!

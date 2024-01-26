@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d67f7427568324da270f738eee1067, type: 3}
-  m_Name: joke1
+  m_Name: joke1 1
   m_EditorClassIdentifier: 
   joke:
     jokeType: 5
-    jokePhrase: Why did the _____ bring a ladder to the dragon's lair? He wanted
-      to go to great heights to slay the beast!
-    correctAnswer: knight
+    jokePhrase: Why did the jester bring a ladder to the _____? He heard the king
+      wanted to raise the roof!
+    correctAnswer: castle
     wrongAnswer:
-    - castle
+    - knight
     - dragon
     - blacksmith
     - lady
@@ -27,6 +27,5 @@ MonoBehaviour:
     - librarian
     - princess
     - king
-    firstPart: Why did the
-    lastPart: bring a ladder to the dragon's lair? He wanted to go to great heights
-      to slay the beast
+    firstPart: Why did the jester bring a ladder to the
+    lastPart: '? He heard the king wanted to raise the roof'
