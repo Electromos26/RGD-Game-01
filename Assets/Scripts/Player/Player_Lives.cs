@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Player_Lives : Singleton<Player_Lives>
 {
@@ -32,7 +34,15 @@ public class Player_Lives : Singleton<Player_Lives>
         {
             //Play king laughing animation
             //Play Death animation
+            Invoke("LoadLoseScene", 3f);//replace with animation event
             //Load Lose screen screen
+
         }
+    }
+    public void LoadLoseScene() 
+    {
+
+        SceneManager.LoadScene("03_LoseScreen");    
+
     }
 }

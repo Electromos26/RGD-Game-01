@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KingHappinessManager : Singleton<KingHappinessManager>
 {
@@ -28,6 +29,7 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
         else if (kingHappiness >= 10)
         {
             //Play king laughing animation
+            Invoke("LoadWinScene", 3f);//replace with animation event
             //Load winning screen
         }
         else
@@ -49,6 +51,10 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
         Debug.Log(kingHappiness);
     }
 
-
+    public void LoadWinScene()
+    {
+        //Load Win screen
+        SceneManager.LoadScene("04_WinScreen");
+    }
 
 }
