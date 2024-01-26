@@ -126,10 +126,10 @@ TextureImporter:
       name: Sloth-Idle_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 30
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,7 +137,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22ca6eba058644f44af77162ede74fad
+      spriteID: 2a909ce2f7893004fa34926e1fd58a35
       internalID: -728573104
       vertices: []
       indices: 
@@ -147,10 +147,10 @@ TextureImporter:
       name: Sloth-Idle_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 0
-        width: 30
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,7 +158,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8d4b1d4650d57c40852bb7fbaee5a48
+      spriteID: 1a2d4f1a0c3629e43b43b769e733ad58
       internalID: 576628330
       vertices: []
       indices: 
@@ -168,10 +168,10 @@ TextureImporter:
       name: Sloth-Idle_2
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 0
-        width: 30
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,7 +179,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f489dcaf75d7ac54198511e987269617
+      spriteID: 9ead884eb435edc4aa1c200613b6bde7
       internalID: -1692526423
       vertices: []
       indices: 
@@ -189,10 +189,10 @@ TextureImporter:
       name: Sloth-Idle_3
       rect:
         serializedVersion: 2
-        x: 97
+        x: 96
         y: 0
-        width: 30
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,7 +200,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 359b417de69bd054eaec11c4a7508aed
+      spriteID: 374f3997f4b58c040b094c9ab182a668
       internalID: -1366996523
       vertices: []
       indices: 
@@ -210,10 +210,10 @@ TextureImporter:
       name: Sloth-Idle_4
       rect:
         serializedVersion: 2
-        x: 129
+        x: 128
         y: 0
-        width: 30
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,7 +221,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f945f96adcface42b04458839ed11a0
+      spriteID: 46201487f2faede4382636612f6aa0a2
       internalID: 976967229
       vertices: []
       indices: 
@@ -231,10 +231,10 @@ TextureImporter:
       name: Sloth-Idle_5
       rect:
         serializedVersion: 2
-        x: 161
+        x: 160
         y: 0
-        width: 30
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,7 +242,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 461cf132408db6d45b2effb5b2257c2d
+      spriteID: df838a1a384c2a347866504b36414615
       internalID: -1426084726
       vertices: []
       indices: 
@@ -254,8 +254,8 @@ TextureImporter:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 30
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,7 +263,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 924cdd3eaf650f344b47dc36553e104c
+      spriteID: af31352ea7bc7834fa061db221c0fff2
       internalID: 851291262
       vertices: []
       indices: 
@@ -275,8 +275,8 @@ TextureImporter:
         serializedVersion: 2
         x: 224
         y: 0
-        width: 30
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,7 +284,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c7b69b556078ae4bb1ccb5b9595d616
+      spriteID: b370e03681c6d0844be9b46837e0a96b
       internalID: 1985251316
       vertices: []
       indices: 
@@ -296,8 +296,8 @@ TextureImporter:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 30
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,7 +305,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a80b88f40bbd84429b39b7291f16085
+      spriteID: 1bd6cf60037d15d4a8db5d25b0264ab3
       internalID: -819329214
       vertices: []
       indices: 
@@ -315,10 +315,10 @@ TextureImporter:
       name: Sloth-Idle_9
       rect:
         serializedVersion: 2
-        x: 289
+        x: 288
         y: 0
-        width: 30
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,7 +326,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 785602002567de14198fa2e5c4cffed8
+      spriteID: 50dbfd0e126cc71428e42abea0305b95
       internalID: 843349080
       vertices: []
       indices: 
@@ -336,10 +336,10 @@ TextureImporter:
       name: Sloth-Idle_10
       rect:
         serializedVersion: 2
-        x: 321
+        x: 320
         y: 0
-        width: 30
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,7 +347,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c49882659aa0a843878f1871a913310
+      spriteID: b58b0c8089b1c764a891ce61e5e0e013
       internalID: 1306849933
       vertices: []
       indices: 
@@ -357,10 +357,10 @@ TextureImporter:
       name: Sloth-Idle_11
       rect:
         serializedVersion: 2
-        x: 353
+        x: 352
         y: 0
-        width: 30
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,7 +368,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4e98dac7393262449ffeb6e24c775f0
+      spriteID: f8a64c32171f11c4da56bfcb8aad3b17
       internalID: 1793510322
       vertices: []
       indices: 
