@@ -13,7 +13,6 @@ public class TransitionManager : Singleton<TransitionManager>
 
     private int currentGameSelec = 0;
 
-
     public enum State
     {
         kingChoosing,
@@ -34,7 +33,7 @@ public class TransitionManager : Singleton<TransitionManager>
         switch (currentState)
         {
             case State.kingChoosing:
-                OnKingChoosing();
+                StartCoroutine(OnKingChoosing());
                 break;
             case State.KingReacting:
                 StartCoroutine(OnKingReacting());
@@ -44,14 +43,16 @@ public class TransitionManager : Singleton<TransitionManager>
         }
 
     }
-    void OnKingChoosing()
+    IEnumerator OnKingChoosing()
     {
+        yield return new WaitForSeconds(2f);
 
-        Invoke("SelectMiniGame", 3f);
+        KingEmotion.Instance.TriggerChoosingAnim();
+
+        SelectMiniGame();
         // currentMiniGame = miniGames[Random.Range(0, miniGames.Count)];//is this the right way to do this?fixxxxx 
         
         //trigger animation of king choosing
-        KingEmotion.Instance.TriggerChoosingAnim();
 
         // oWe need to choose one minigame from the random list
     }

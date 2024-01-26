@@ -24,8 +24,6 @@ public class KingEmotion : Singleton<KingEmotion>
     [SerializeField] private Image activeSprite;
 
     [SerializeField] private GameObject kingFeedbackBox;
-
-
     public enum emotion
     {
         mad,
@@ -95,8 +93,6 @@ public class KingEmotion : Singleton<KingEmotion>
 
     }
 
-
-
     private void OnLaughing()
     {
         kingAnim.SetBool("KingLaughing", true);
@@ -110,6 +106,7 @@ public class KingEmotion : Singleton<KingEmotion>
         activeClip = clipMad;
         activeSprite.sprite = spriteRllyMad;
     }
+
     #region King Animations 
 
     public void TriggerChoosingAnim()

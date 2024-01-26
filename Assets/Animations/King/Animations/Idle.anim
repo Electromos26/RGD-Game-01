@@ -22,41 +22,41 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -710636886, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
-    - time: 0.06666667
+    - time: 0.05
       value: {fileID: -1139592357, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
     - time: 0.1
       value: {fileID: -983102489, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
-    - time: 0.18333334
+    - time: 0.15
       value: {fileID: 2022862397, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
-    - time: 0.2
+    - time: 0.21666667
       value: {fileID: 1945338823, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
-    - time: 0.28333333
+    - time: 0.26666668
       value: {fileID: 692300681, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
-    - time: 0.3
+    - time: 0.31666666
       value: {fileID: -1439214392, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
     - time: 0.36666667
       value: {fileID: -1085860259, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
-    - time: 0.43333334
+    - time: 0.41666666
       value: {fileID: -160395918, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
     - time: 0.46666667
       value: {fileID: 854487426, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
     - time: 0.53333336
       value: {fileID: -1035785107, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
-    - time: 0.56666666
+    - time: 0.5833333
       value: {fileID: -1473320520, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
     - time: 0.6333333
       value: {fileID: -1804586192, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
-    - time: 0.7
+    - time: 0.68333334
       value: {fileID: -70231303, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
-    - time: 0.71666664
+    - time: 0.73333335
       value: {fileID: -564205996, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
-    - time: 0.8
+    - time: 0.78333336
       value: {fileID: -1331107558, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
-    - time: 0.81666666
+    - time: 0.85
       value: {fileID: 1099578803, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
     - time: 0.9
       value: {fileID: -2052219720, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
-    - time: 0.93333334
+    - time: 0.95
       value: {fileID: -1923649631, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}
     - time: 1
       value: {fileID: -1560528798, guid: 6e657f98a66da594a9006b65d7dd74fd, type: 3}

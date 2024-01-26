@@ -3114,37 +3114,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &962565775
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 962565776}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &962565776
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962565775}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.43387085, y: -0.34766817, z: -13.641207}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1007082315
 GameObject:
   m_ObjectHideFlags: 0
@@ -4275,12 +4244,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd17e2e2790d4f4097f0fe1e7c022fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kingAnim: {fileID: 1595429247}
   clipMad: {fileID: 8300000, guid: d8ce83fefd28d7b40add4f0083e27d78, type: 3}
   clipNeutral: {fileID: 0}
   clipHappy: {fileID: 0}
+  clipLaughing: {fileID: 0}
   spriteMad: {fileID: 21300000, guid: cbdcc5772488eff4d98f98bcb329452f, type: 3}
   spriteNeutral: {fileID: 21300000, guid: 64942e702601c9a40a1eea601a3698f9, type: 3}
   spriteHappy: {fileID: 21300000, guid: 9adcc07b99dd34542994dda213a0714a, type: 3}
+  spriteLaughing: {fileID: 0}
+  spriteRllyMad: {fileID: 0}
   SFXSource: {fileID: 790978364}
   activeSprite: {fileID: 1914634590}
   kingFeedbackBox: {fileID: 1591476224}
@@ -4840,7 +4813,7 @@ Transform:
   m_GameObject: {fileID: 1595429245}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.96, y: -2.39, z: 13.640092}
+  m_LocalPosition: {x: 5, y: -2.42, z: 13.640092}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6633,4 +6606,3 @@ SceneRoots:
   - {fileID: 57132907}
   - {fileID: 1543815661}
   - {fileID: 353508866}
-  - {fileID: 962565776}
