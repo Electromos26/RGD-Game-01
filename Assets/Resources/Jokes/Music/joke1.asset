@@ -14,13 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joke:
     jokeType: 2
-    jokePhrase: '"Why do fathers take an extra pair of socks when they go ______?"
-      "In case they get a hole in one!"'
-    correctAnswer: Golf
+    jokePhrase: Why did the  teacher go to jail? Because she got caught with too
+      many sharp objects!
+    correctAnswer: music
     wrongAnswer:
-    - basketball
-    - baseball
-    - haha
-    - ha
+    - metronome
+    - tuba
+    - note
+    - composer
+    - guitarist
+    - band
     firstPart: as
     lastPart: sa
