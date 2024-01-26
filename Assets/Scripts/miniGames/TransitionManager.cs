@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TransitionManager : Singleton<TransitionManager>
 {
@@ -11,6 +12,7 @@ public class TransitionManager : Singleton<TransitionManager>
     private GameObject currentMiniGame;
 
     private int currentGameSelec = 0;
+
 
     public enum State
     {
@@ -22,7 +24,6 @@ public class TransitionManager : Singleton<TransitionManager>
 
     private void Start()
     {
-
         SetState(State.kingChoosing);
     }
 
@@ -48,24 +49,31 @@ public class TransitionManager : Singleton<TransitionManager>
 
         Invoke("SelectMiniGame", 3f);
         // currentMiniGame = miniGames[Random.Range(0, miniGames.Count)];//is this the right way to do this?fixxxxx 
+        
+        //trigger animation of king choosing
+        KingEmotion.Instance.TriggerChoosingAnim();
+
         // oWe need to choose one minigame from the random list
     }
     IEnumerator OnKingReacting()
     {
         //Show Kings Reaction on top of its head
         yield return new WaitForSeconds(0.5f);
-
         KingEmotion.Instance.PlayEmotionClip();
         Debug.Log("Reacting");
         SetState(State.kingChoosing);
 
     }
-
+   
+    public void LoadWinScene() //play in animation event
+    {
+        //Load Win screen
+        SceneManager.LoadScene("04_WinScreen");
+    }
     private void SelectMiniGame()
     {
 
         currentGameSelec = (currentGameSelec + 1) % miniGames.Count;
-
         kingSpeakingBox.GetComponentInChildren<TMP_Text>().text = miniGames[currentGameSelec].name;
         kingSpeakingBox.SetActive(true);
     }
@@ -74,5 +82,6 @@ public class TransitionManager : Singleton<TransitionManager>
     {
         miniGames[currentGameSelec].gameObject.GetComponent<MiniGames>().OnMiniGameStart.Invoke();
     }
+
 
 }

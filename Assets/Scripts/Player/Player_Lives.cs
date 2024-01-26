@@ -32,8 +32,7 @@ public class Player_Lives : Singleton<Player_Lives>
         livesUI[lives].gameObject.SetActive(false);
         if (lives <= 0)
         {
-            //Play king laughing animation
-            //Play Death animation
+
             Invoke("LoadLoseScene", 3f);//replace with animation event
             //Load Lose screen screen
 

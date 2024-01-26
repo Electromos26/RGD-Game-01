@@ -21,15 +21,16 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
 
         if (kingHappiness <= 0)
         {
+            KingEmotion.Instance.SetEmotion(KingEmotion.emotion.rllyMad);
             Player_Lives.Instance.SubtractLives(1);
-            //Play Attack animation
-            //Play Mad sound
             kingHappiness = 5;
         }
         else if (kingHappiness >= 10)
         {
-            //Play king laughing animation
+            KingEmotion.Instance.SetEmotion(KingEmotion.emotion.laughing);
+
             Invoke("LoadWinScene", 3f);//replace with animation event
+           
             //Load winning screen
         }
         else
@@ -37,6 +38,8 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
             if (addedPoints > 1)
             {
                 KingEmotion.Instance.SetEmotion(KingEmotion.emotion.happy);
+
+
             }
             else if(addedPoints < -1)
             {
@@ -51,10 +54,4 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
         Debug.Log(kingHappiness);
     }
 
-    public void LoadWinScene()
-    {
-        //Load Win screen
-        SceneManager.LoadScene("04_WinScreen");
-    }
-
-}
+  }
