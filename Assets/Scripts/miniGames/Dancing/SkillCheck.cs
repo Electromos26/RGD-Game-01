@@ -10,9 +10,6 @@ public class SkillCheck : MonoBehaviour
     private int right = 270;
 
     [SerializeField] float minPos= 50;
-    //play sounds in animation events
-    [SerializeField] private AudioClip sucess;
-    [SerializeField] private AudioClip fail;
 
     RectTransform rect;
     RectTransform originalPos;
@@ -22,7 +19,8 @@ public class SkillCheck : MonoBehaviour
 
     bool canPress = false;
 
-    [SerializeField] UnityEvent timerOff;
+    [SerializeField] UnityEvent PlaySucess;
+    [SerializeField] UnityEvent PlayFail;
 
     private void Awake()
     {
@@ -54,14 +52,16 @@ public class SkillCheck : MonoBehaviour
             if (pass)
             {
                 Debug.Log("Skill Check : Passed");
+                PlaySucess.Invoke();
                 ChangePos();
                 DanceMiniGame.Instance.Passed();
                 //Telepot to next position
             }
             else if (canPress)
             {
-                ChangePos();
                 Debug.Log("Skill Check : Failed");
+                PlayFail.Invoke();
+                ChangePos();
                 DanceMiniGame.Instance.Failed();
             }
             else

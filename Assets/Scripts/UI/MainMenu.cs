@@ -16,7 +16,10 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
-        _creditsMenu.SetActive(false);
+        if (_creditsMenu == null)
+            Debug.LogWarning("No credits menu found");
+        else
+            _creditsMenu.SetActive(false);
 
 
         mainSpeaker = GetComponent<AudioSource>();
@@ -33,7 +36,11 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-     //   SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+      SceneManager.LoadScene("02_Game");
+    }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("01_MainMenu");
     }
     public void QuitGame()
     {
