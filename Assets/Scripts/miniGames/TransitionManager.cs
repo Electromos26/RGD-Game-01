@@ -62,6 +62,7 @@ public class TransitionManager : Singleton<TransitionManager>
         yield return new WaitForSeconds(0.5f);
         KingEmotion.Instance.PlayEmotionClip();
         Debug.Log("Reacting");
+
         SetState(State.kingChoosing);
 
     }

@@ -9,6 +9,8 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
     [SerializeField] private GameObject jokeChoices;
     [SerializeField] private GameObject jokeAnswer;
 
+    [SerializeField] private Animator playerAnim;
+
 
     #region Text Containers
     [SerializeField] TMP_Text JokeQuestion;
@@ -138,6 +140,8 @@ public class DisplayJokeManager : Singleton<DisplayJokeManager>
         jokeAnswer.gameObject.GetComponentInChildren<TMP_Text>().text = firstPart + " " + answer + " " + lastPart;
 
         jokeAnswer.SetActive(true);
+
+        playerAnim.SetTrigger("Talk");
 
     }
 

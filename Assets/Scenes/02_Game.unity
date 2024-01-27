@@ -1869,7 +1869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &686231201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3894,7 +3894,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1fdadef27920ffc49af660b05b37d6b9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c1baa0343fdeb584a93835518372f3fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4249,11 +4249,11 @@ MonoBehaviour:
   clipNeutral: {fileID: 0}
   clipHappy: {fileID: 0}
   clipLaughing: {fileID: 0}
-  spriteMad: {fileID: 21300000, guid: 4968cfba5711e87468d1e795f9c32eb7, type: 3}
-  spriteNeutral: {fileID: 21300000, guid: e3e1fcdf915055149977377d72a5191e, type: 3}
-  spriteHappy: {fileID: 21300000, guid: cd0f38f39af0ee64795ad24555fae9af, type: 3}
-  spriteLaughing: {fileID: 21300000, guid: c7dfd43928cf99148ba930ece084a360, type: 3}
-  spriteRllyMad: {fileID: 21300000, guid: b282dea42296fcc44babf5754b6d356a, type: 3}
+  spriteMad: {fileID: 21300000, guid: a2cbbafc5d2de644597940b222901587, type: 3}
+  spriteNeutral: {fileID: 21300000, guid: 7ee4f731f9ae26f44bc893c80c58d436, type: 3}
+  spriteHappy: {fileID: 21300000, guid: 2a729e648bb98014ebb47f5916c64961, type: 3}
+  spriteLaughing: {fileID: 21300000, guid: 86bc0cb63e5b1a44cad7659d02896566, type: 3}
+  spriteRllyMad: {fileID: 21300000, guid: 247ad95996a72bd498bf66321291d382, type: 3}
   SFXSource: {fileID: 790978364}
   activeSprite: {fileID: 1914634590}
   kingFeedbackBox: {fileID: 1591476224}
@@ -4385,7 +4385,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 99.60221, y: 24.724247, z: 99.624626, w: 24.760511}
+  m_margin: {x: 99.63383, y: 24.735739, z: 99.60164, w: 24.780622}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4777,7 +4777,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  timeLimit: 3
+  timeLimit: 2.5
 --- !u!222 &1591476227
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5180,6 +5180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jokeChoices: {fileID: 686231200}
   jokeAnswer: {fileID: 1237236319}
+  playerAnim: {fileID: 2067187133}
   JokeQuestion: {fileID: 732506331}
   Answer1: {fileID: 2066222344}
   Answer2: {fileID: 916099362}
@@ -5603,7 +5604,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cbdcc5772488eff4d98f98bcb329452f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a729e648bb98014ebb47f5916c64961, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5630,15 +5631,15 @@ RectTransform:
   m_GameObject: {fileID: 1914634589}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.20000002, y: 0.20000002, z: 0.20000002}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 727175879}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -7, y: 37}
-  m_SizeDelta: {x: 64.5213, y: 64.1324}
+  m_SizeDelta: {x: 300, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1943472928
 GameObject:
