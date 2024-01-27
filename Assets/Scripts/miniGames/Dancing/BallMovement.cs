@@ -1,16 +1,14 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BallMovement : MonoBehaviour
 {
-  
+
     [SerializeField] private float speedMultiply = 1.5f;
     [SerializeField] private GameObject start;
     [SerializeField] private GameObject end;
 
 
-    private float speed = 1f; 
+    private float speed = 1f;
     private RectTransform rect;
     private RectTransform startRect;
     private RectTransform endRect;

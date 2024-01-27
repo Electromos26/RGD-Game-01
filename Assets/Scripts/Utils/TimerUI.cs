@@ -32,5 +32,9 @@ public class TimerUI : Singleton<TimerUI>
             this.gameObject.SetActive(false);
         }
     }
+    public void Turnoff()
+    {
+        this.gameObject.SetActive(false);
+    }
 }
 

@@ -49,12 +49,13 @@ public class SkillCheck : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
 
-            if (pass)
+            if (pass && canPress)
             {
                 Debug.Log("Skill Check : Passed");
                 PlaySucess.Invoke();
                 ChangePos();
                 DanceMiniGame.Instance.Passed();
+                TimerUI.Instance.Turnoff();
                 //Telepot to next position
             }
             else if (canPress)
@@ -63,6 +64,8 @@ public class SkillCheck : MonoBehaviour
                 PlayFail.Invoke();
                 ChangePos();
                 DanceMiniGame.Instance.Failed();
+                TimerUI.Instance.Turnoff();
+
             }
             else
             {

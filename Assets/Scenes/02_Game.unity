@@ -2639,6 +2639,7 @@ MonoBehaviour:
   turnsLeft: 4
   ball: {fileID: 662044673}
   skillCheckGame: {fileID: 158996825}
+  slothAnim: {fileID: 2067187133}
 --- !u!1 &841146563
 GameObject:
   m_ObjectHideFlags: 0
@@ -6237,6 +6238,7 @@ GameObject:
   - component: {fileID: 2067187132}
   - component: {fileID: 2067187134}
   - component: {fileID: 2067187133}
+  - component: {fileID: 2067187135}
   m_Layer: 0
   m_Name: Sloth-Idle_0
   m_TagString: Untagged
@@ -6332,6 +6334,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2067187135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067187131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ece2122f3d64c94baac01ef56156a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2077500098
 GameObject:
   m_ObjectHideFlags: 0
