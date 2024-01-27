@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > timeLimit)
         {
-            EndOfTimer.Invoke();
+            EndOfTimer?.Invoke();
             timer = 0f;
         }
     }

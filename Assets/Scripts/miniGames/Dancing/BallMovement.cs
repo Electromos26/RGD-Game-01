@@ -32,7 +32,7 @@ public class BallMovement : MonoBehaviour
     }
     public void SpeedX2()
     {
-        speed *= speedMultiply;
+        speed *= speedMultiply * GameManager.Instance.Difficulty;
     }
     public void ResetSpeed()
     {

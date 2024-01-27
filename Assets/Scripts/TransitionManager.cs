@@ -67,10 +67,16 @@ public class TransitionManager : Singleton<TransitionManager>
 
     }
    
-    public void LoadWinScene() //play in animation event
+    public void LoadWinScene() 
     {
         //Load Win screen
-        SceneManager.LoadScene("04_WinScreen");
+        SceneManager.LoadScene("03_WinScreen");
+    }
+    public void LoadLoseScene()
+    {
+
+        SceneManager.LoadScene("04_LoseScreen");
+
     }
     private void SelectMiniGame()
     {

@@ -30,10 +30,11 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
     public void NextTurn()
     {
         skillCheckGame.SetActive(false);
+        turnsLeft--;
         if (turnsLeft > 0)
         {
             ball.SpeedX2();
-            turnsLeft--;
+           
             
                 
            Invoke("StartDancing", 3f);
@@ -42,8 +43,9 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
         else if (turnsLeft <= 0)
         {
             Debug.Log("Finish dance Mini Game");
+           
             FinishMiniGame();
-            return;
+           
         }
     }
 
@@ -56,15 +58,16 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
     public void Passed()
     {
 
-        if (finalPoints < 2)
+        if (finalPoints < GameConstants.HAPPINESS_MODIFIER)
             finalPoints++;
         NextTurn();
     }
+
     public void Failed()
     {
         slothAnim.SetTrigger("Cry");
 
-        if (finalPoints > -2)
+        if (finalPoints > -GameConstants.HAPPINESS_MODIFIER)
             finalPoints--;
 
         NextTurn();
@@ -74,7 +77,7 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
     public void FinishMiniGame()
     {
         slothAnim.SetBool("Dancing", false);
-
+        ball.ResetSpeed();
         KingHappinessManager.Instance.AddHappiness(finalPoints);
 
         TransitionManager.Instance.SetState(TransitionManager.State.KingReacting);

@@ -29,7 +29,7 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
         {
             KingEmotion.Instance.SetEmotion(KingEmotion.emotion.laughing);
 
-            Invoke("LoadWinScene", 3f);//replace with animation event
+            TransitionManager.Instance.LoadWinScene();
            
             //Load winning screen
         }

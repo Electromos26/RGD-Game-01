@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,15 +30,9 @@ public class Player_Lives : Singleton<Player_Lives>
         if (lives <= 0)
         {
 
-            Invoke("LoadLoseScene", 3f);//replace with animation event
-            //Load Lose screen screen
+            TransitionManager.Instance.LoadLoseScene();
 
         }
     }
-    public void LoadLoseScene() 
-    {
-
-        SceneManager.LoadScene("03_LoseScreen");    
-
-    }
+ 
 }
