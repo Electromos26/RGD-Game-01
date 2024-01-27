@@ -4249,11 +4249,11 @@ MonoBehaviour:
   clipNeutral: {fileID: 0}
   clipHappy: {fileID: 0}
   clipLaughing: {fileID: 0}
-  spriteMad: {fileID: 21300000, guid: cbdcc5772488eff4d98f98bcb329452f, type: 3}
-  spriteNeutral: {fileID: 21300000, guid: 64942e702601c9a40a1eea601a3698f9, type: 3}
-  spriteHappy: {fileID: 21300000, guid: 9adcc07b99dd34542994dda213a0714a, type: 3}
-  spriteLaughing: {fileID: 0}
-  spriteRllyMad: {fileID: 0}
+  spriteMad: {fileID: 21300000, guid: 4968cfba5711e87468d1e795f9c32eb7, type: 3}
+  spriteNeutral: {fileID: 21300000, guid: e3e1fcdf915055149977377d72a5191e, type: 3}
+  spriteHappy: {fileID: 21300000, guid: cd0f38f39af0ee64795ad24555fae9af, type: 3}
+  spriteLaughing: {fileID: 21300000, guid: c7dfd43928cf99148ba930ece084a360, type: 3}
+  spriteRllyMad: {fileID: 21300000, guid: b282dea42296fcc44babf5754b6d356a, type: 3}
   SFXSource: {fileID: 790978364}
   activeSprite: {fileID: 1914634590}
   kingFeedbackBox: {fileID: 1591476224}
@@ -4777,7 +4777,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  timeLimit: 1.5
+  timeLimit: 3
 --- !u!222 &1591476227
 CanvasRenderer:
   m_ObjectHideFlags: 0

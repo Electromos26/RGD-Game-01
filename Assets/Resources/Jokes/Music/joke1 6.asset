@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d67f7427568324da270f738eee1067, type: 3}
-  m_Name: joke1
+  m_Name: joke1 6
   m_EditorClassIdentifier: 
   joke:
     jokeType: 2
-    jokePhrase: Why did the ______ teacher go to jail? Because she got caught with
-      too many sharp objects!
-    correctAnswer: music
+    jokePhrase: 'What''s a _____ least favorite instrument?
+
+      The trom-bone.'
+    correctAnswer: skeleton
     wrongAnswer:
     - metronome
     - tuba
@@ -24,7 +25,9 @@ MonoBehaviour:
     - composer
     - guitarist
     - band
+    - music
     - musician
-    - musician
-    firstPart: Why did the
-    lastPart: teacher go to jail? Because she got caught with too many sharp objects!
+    - high
+    - piano
+    firstPart: What's a
+    lastPart: least favorite instrument? The trom-bone.
