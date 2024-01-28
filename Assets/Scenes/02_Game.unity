@@ -1237,7 +1237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &355763386
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1644,6 +1644,7 @@ GameObject:
   - component: {fileID: 535612242}
   - component: {fileID: 535612244}
   - component: {fileID: 535612243}
+  - component: {fileID: 535612246}
   m_Layer: 5
   m_Name: TimerSlider
   m_TagString: Untagged
@@ -1737,6 +1738,14 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!222 &535612246
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535612241}
+  m_CullTransparentMesh: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3641,9 +3650,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d91a76b3fe65b8d47b0547000d2e3e57, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c88ba4153f79ef34ea2d1e6b3866c28f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
