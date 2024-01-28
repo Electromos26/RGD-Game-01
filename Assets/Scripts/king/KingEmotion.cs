@@ -84,7 +84,6 @@ public class KingEmotion : Singleton<KingEmotion>
         activeClip = clipNeutral;
         activeSprite.sprite = spriteNeutral;
         correctAnimation = "KingNeutral";
-
     }
 
     private void OnKingHappy()
@@ -104,7 +103,7 @@ public class KingEmotion : Singleton<KingEmotion>
 
     private void OnRllyMad()
     {
-        correctAnimation = "KingReallyMad";
+        correctAnimation = "KingMad";
         activeClip = clipMad;
         activeSprite.sprite = spriteRllyMad;
     }
