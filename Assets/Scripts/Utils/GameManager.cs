@@ -12,15 +12,9 @@ public class GameManager : Singleton<GameManager>
     {
         this.Difficulty = 1f;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+       if(Input.GetKeyDown(KeyCode.Escape))  //only game jam
+            Application.Quit();
     }
 }
