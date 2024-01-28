@@ -103,7 +103,7 @@ public class KingEmotion : Singleton<KingEmotion>
 
     private void OnRllyMad()
     {
-        correctAnimation = "KingMad";
+        correctAnimation = "KingReallyMad";
         activeClip = clipMad;
         activeSprite.sprite = spriteRllyMad;
     }

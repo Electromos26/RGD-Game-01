@@ -4517,7 +4517,7 @@ MonoBehaviour:
   clipNeutral: {fileID: 8300000, guid: 9a57c3e01781ee342bb58ad65f14ea35, type: 3}
   clipHappy: {fileID: 8300000, guid: eb3fd3ec77c4b2340b7f41e86bb9035d, type: 3}
   clipLaughing: {fileID: 8300000, guid: 193b5c371125e204d8440070013982d1, type: 3}
-  spriteMad: {fileID: 21300000, guid: a2cbbafc5d2de644597940b222901587, type: 3}
+  spriteMad: {fileID: 21300000, guid: 247ad95996a72bd498bf66321291d382, type: 3}
   spriteNeutral: {fileID: 21300000, guid: 7ee4f731f9ae26f44bc893c80c58d436, type: 3}
   spriteHappy: {fileID: 21300000, guid: 2a729e648bb98014ebb47f5916c64961, type: 3}
   spriteLaughing: {fileID: 21300000, guid: 86bc0cb63e5b1a44cad7659d02896566, type: 3}
