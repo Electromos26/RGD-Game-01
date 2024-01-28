@@ -94,6 +94,6 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
         KingHappinessManager.Instance.AddHappiness(finalPoints);
 
         TransitionManager.Instance.SetState(TransitionManager.State.KingReacting);
-        FeedBackManager.Instance.Invoke("ClearHats",2f);
+        FeedBackManager.Instance.Invoke("ClearHats",3f);
     }
 }
