@@ -13,6 +13,9 @@ public class BallMovement : MonoBehaviour
     private RectTransform startRect;
     private RectTransform endRect;
 
+    public float Speed 
+    {  get { return speed; }}
+
     private void Start()
     {
         rect = GetComponent<RectTransform>();

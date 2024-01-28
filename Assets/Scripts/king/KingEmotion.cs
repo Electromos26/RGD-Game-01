@@ -24,6 +24,8 @@ public class KingEmotion : Singleton<KingEmotion>
     [SerializeField] private Image activeSprite;
 
     [SerializeField] private GameObject kingFeedbackBox;
+
+    private string correctAnimation;
     public enum emotion
     {
         mad,
@@ -64,6 +66,7 @@ public class KingEmotion : Singleton<KingEmotion>
     public void PlayEmotionClip()
     {
         kingFeedbackBox.SetActive(true);
+        kingAnim.SetTrigger(correctAnimation);
         SFXSource.clip = activeClip;
         SFXSource.Play();
     }
@@ -73,15 +76,14 @@ public class KingEmotion : Singleton<KingEmotion>
     {
         activeClip = clipMad;
         activeSprite.sprite = spriteMad;
-        kingAnim.SetTrigger("KingMad");
-
+        correctAnimation = "KingMad";
     }
 
     private void OnKingNeutral()
     {
         activeClip = clipNeutral;
         activeSprite.sprite = spriteNeutral;
-        kingAnim.SetTrigger("KingNeutral");
+        correctAnimation = "KingNeutral";
 
     }
 
@@ -89,20 +91,20 @@ public class KingEmotion : Singleton<KingEmotion>
     {
         activeClip = clipHappy;
         activeSprite.sprite = spriteHappy;
-        kingAnim.SetTrigger("KingHappy");   
+        correctAnimation = "KingHappy";
 
     }
 
     private void OnLaughing()
     {
-        kingAnim.SetBool("KingLaughing", true);
+        correctAnimation = "KingFinalLaugh";
         activeClip = clipLaughing;
         activeSprite.sprite = spriteLaughing;
     }
 
     private void OnRllyMad()
     {
-        kingAnim.SetTrigger("KingReallyMad");
+        correctAnimation = "KingReallyMad";
         activeClip = clipMad;
         activeSprite.sprite = spriteRllyMad;
     }

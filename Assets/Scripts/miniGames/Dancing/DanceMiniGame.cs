@@ -19,6 +19,11 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
     {
         resetValue = turnsLeft;
     }
+    public void ShowHats()
+    {
+        FeedBackManager.Instance.AddHats(turnsLeft);
+    }
+
     public void StartDancing()
     {
         skillCheckGame.SetActive(true);
@@ -31,13 +36,14 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
     {
         skillCheckGame.SetActive(false);
         turnsLeft--;
+
+        slothAnim.SetFloat("DanceMultiplier", ball.Speed);
+
         if (turnsLeft > 0)
         {
             ball.SpeedX2();
            
-            
-                
-           Invoke("StartDancing", 3f);
+           Invoke("StartDancing", 2.5f);
 
         }
         else if (turnsLeft <= 0)
@@ -57,6 +63,9 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
 
     public void Passed()
     {
+        slothAnim.SetTrigger("Success");
+        slothAnim.SetBool("Dancing", false);
+        FeedBackManager.Instance.ChangeColor(true);
 
         if (finalPoints < GameConstants.HAPPINESS_MODIFIER)
             finalPoints++;
@@ -65,7 +74,10 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
 
     public void Failed()
     {
+
         slothAnim.SetTrigger("Cry");
+        slothAnim.SetBool("Dancing", false);
+        FeedBackManager.Instance.ChangeColor(false);
 
         if (finalPoints > -GameConstants.HAPPINESS_MODIFIER)
             finalPoints--;
@@ -81,5 +93,6 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
         KingHappinessManager.Instance.AddHappiness(finalPoints);
 
         TransitionManager.Instance.SetState(TransitionManager.State.KingReacting);
+        FeedBackManager.Instance.Invoke("ClearHats",2f);
     }
 }
