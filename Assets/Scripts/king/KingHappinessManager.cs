@@ -34,12 +34,11 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
             if (addedPoints > 1)
             {
                 KingEmotion.Instance.SetEmotion(KingEmotion.emotion.happy);
-
-
             }
             else if (addedPoints < -1)
             {
                 KingEmotion.Instance.SetEmotion(KingEmotion.emotion.mad);
+                Player_Lives.Instance.SubtractLives(1);
             }
             else
             {
