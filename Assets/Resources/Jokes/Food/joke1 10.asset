@@ -16,7 +16,7 @@ MonoBehaviour:
     jokeType: 0
     jokePhrase: Why did the _____ chef break up with his girlfriend? She was soy
       into herself!
-    correctAnswer: ushi
+    correctAnswer: sushi
     wrongAnswer:
     - tomato
     - nacho

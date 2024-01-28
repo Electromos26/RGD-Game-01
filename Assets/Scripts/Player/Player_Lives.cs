@@ -30,7 +30,7 @@ public class Player_Lives : Singleton<Player_Lives>
         if (lives <= 0)
         {
 
-            TransitionManager.Instance.LoadLoseScene();
+            TransitionManager.Instance.Invoke("LoadLoseScene", 3f);
 
         }
     }
