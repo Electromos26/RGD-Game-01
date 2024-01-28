@@ -45,9 +45,6 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("Quit");
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
         Application.Quit();
     }
     public void ToggleCredits()

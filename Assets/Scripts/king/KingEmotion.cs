@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -51,7 +49,7 @@ public class KingEmotion : Singleton<KingEmotion>
                 break;
             case emotion.happy:
                 OnKingHappy();
-                break; 
+                break;
             case emotion.laughing:
                 OnLaughing();
                 break;

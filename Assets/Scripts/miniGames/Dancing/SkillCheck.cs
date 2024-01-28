@@ -1,4 +1,3 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,7 +8,7 @@ public class SkillCheck : MonoBehaviour
     [SerializeField]
     private int right = 270;
 
-    [SerializeField] float minPos= 50;
+    [SerializeField] float minPos = 50;
 
     RectTransform rect;
     RectTransform originalPos;

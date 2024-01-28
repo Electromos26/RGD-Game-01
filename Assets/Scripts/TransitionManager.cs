@@ -51,7 +51,7 @@ public class TransitionManager : Singleton<TransitionManager>
 
         SelectMiniGame();
         // currentMiniGame = miniGames[Random.Range(0, miniGames.Count)];//is this the right way to do this?fixxxxx 
-        
+
         //trigger animation of king choosing
 
         // oWe need to choose one minigame from the random list
@@ -66,8 +66,8 @@ public class TransitionManager : Singleton<TransitionManager>
         SetState(State.kingChoosing);
 
     }
-   
-    public void LoadWinScene() 
+
+    public void LoadWinScene()
     {
         //Load Win screen
         SceneManager.LoadScene("03_WinScreen");

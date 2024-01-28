@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class KingHappinessManager : Singleton<KingHappinessManager>
 {
@@ -30,7 +26,7 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
             KingEmotion.Instance.SetEmotion(KingEmotion.emotion.laughing);
 
             TransitionManager.Instance.Invoke("LoadWinScene", 3f);
-           
+
             //Load winning screen
         }
         else
@@ -41,7 +37,7 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
 
 
             }
-            else if(addedPoints < -1)
+            else if (addedPoints < -1)
             {
                 KingEmotion.Instance.SetEmotion(KingEmotion.emotion.mad);
             }
@@ -54,4 +50,4 @@ public class KingHappinessManager : Singleton<KingHappinessManager>
         Debug.Log(kingHappiness);
     }
 
-  }
+}

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
 public class Player_Lives : Singleton<Player_Lives>
@@ -34,5 +33,5 @@ public class Player_Lives : Singleton<Player_Lives>
 
         }
     }
- 
+
 }
