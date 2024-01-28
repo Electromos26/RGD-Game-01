@@ -59,6 +59,7 @@ public class DanceMiniGame : Singleton<DanceMiniGame>
     {
         turnsLeft = resetValue;
         finalPoints = 0;
+        slothAnim.SetFloat("DanceMultiplier", ball.Speed);
     }
 
     public void Passed()
