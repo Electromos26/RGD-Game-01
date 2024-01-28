@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Laughing
+  m_Name: Mad
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -392381250, guid: abac718a7204e024f87605a8569fe157, type: 3}
-    - time: 0.5
-      value: {fileID: 143296863, guid: abac718a7204e024f87605a8569fe157, type: 3}
-    - time: 1
-      value: {fileID: -657555349, guid: abac718a7204e024f87605a8569fe157, type: 3}
+      value: {fileID: -1821833718, guid: b1691c984461a4e4d8322c4b8b376765, type: 3}
+    - time: 0.48333332
+      value: {fileID: 1945654364, guid: b1691c984461a4e4d8322c4b8b376765, type: 3}
     - time: 1.5
-      value: {fileID: 1729730714, guid: abac718a7204e024f87605a8569fe157, type: 3}
+      value: {fileID: 1945654364, guid: b1691c984461a4e4d8322c4b8b376765, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,10 +48,9 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -392381250, guid: abac718a7204e024f87605a8569fe157, type: 3}
-    - {fileID: 143296863, guid: abac718a7204e024f87605a8569fe157, type: 3}
-    - {fileID: -657555349, guid: abac718a7204e024f87605a8569fe157, type: 3}
-    - {fileID: 1729730714, guid: abac718a7204e024f87605a8569fe157, type: 3}
+    - {fileID: -1821833718, guid: b1691c984461a4e4d8322c4b8b376765, type: 3}
+    - {fileID: 1945654364, guid: b1691c984461a4e4d8322c4b8b376765, type: 3}
+    - {fileID: 1945654364, guid: b1691c984461a4e4d8322c4b8b376765, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
